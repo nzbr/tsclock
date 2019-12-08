@@ -1,0 +1,169 @@
+body {
+    margin: 0px;
+    background-color: black;
+
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: 'DIN1451Mittelschrift';
+}
+
+main {
+    text-align: center;
+    vertical-align: middle;
+
+    font-family: 'DSEG7 Classic';
+    font-size: 10vmax;
+}
+
+footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    text-decoration-color: lime;
+    cursor: pointer;
+}
+
+.flexcell {
+    flex: 1;
+}
+
+.texture {
+    background:url('bg.png');
+    background-repeat:repeat-x;
+    background-position:0 0;
+    color:transparent;
+    -webkit-font-smoothing:antialiased;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin:0;
+}
+
+#dialogcontainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    min-width: 100vw;
+    min-height: 100vh;
+    display: none; /*Will be flex when it is shown*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#dialog {
+    border-width: 2px;
+    border-color: lime;
+    border-style: solid;
+    background-color: black;
+
+    box-shadow: 0 0 10px 0 black;
+    color: lime;
+    padding: 10px;
+}
+
+#dialogx {
+    float: right;
+    font-weight: bold;
+    transition-duration: 250ms;
+}
+
+#dialogx:hover {
+    cursor: default;
+    color: red;
+    transition-duration: 250ms;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.form {
+    margin-left: 33px;
+    margin-right: 33px;
+}
+
+label {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+input {
+    width: calc(100% - 2px);
+
+    border-color: lime;
+    border-style: solid;
+    border-width: 1px;
+
+    background-color: black;
+    color:lime;
+
+    font-family: 'Fira Code';
+}
+
+input.time {
+    width: 50px;
+}
+
+button {
+    border-color: lime;
+    border-style: solid;
+    border-width: 1px;
+
+    background-color: black;
+    color:lime;
+
+    transition-duration: 0.25s;
+
+    flex: 1;
+}
+
+button#dialogcancel {
+    color: red;
+}
+
+button:hover {
+    background-color: lime;
+    color: black;
+    transition-duration: 0.25s;
+}
+
+button:active {
+    background-color: #009900;
+    border-color: #009900;
+    transition-duration: 0.25s;
+}
+
+button#dialogcancel:hover {
+    background-color: red;
+    border-color: red;
+    color: black;
+}
+
+button#dialogcancel:active {
+    background-color: #990000;
+    border-color: #990000;
+}

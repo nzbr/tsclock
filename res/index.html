@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>clock.nzbr.de</title>
+
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://static.nzbr.de/fonts/din1451/din1451.css" />
+        <link rel="stylesheet" type="text/css" href="https://static.nzbr.de/fonts/dseg7/dseg7.css" />
+        <link rel="stylesheet" type="text/css" href="https://static.nzbr.de/fonts/firacode/firacode.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <main id="clocktext" class="texture">
+            Loading...
+        </main>
+        <footer class="texture">
+            <div class="flexcell" style="text-align: left;">
+                <span class="link" id="dialogbtn">Set Coundown</span>
+                &nbsp;
+                <span class="link" id="clearbtn">Clear Countdown</span>
+            </div>
+            <div class="flexcell" style="text-align: center;">clock.nzbr.de</div>
+            <div class="flexcell" style="text-align: right;">
+                <a class="link" href="https://github.com/nzbr/tsclock">GitHub</a>
+            </div>
+        </footer>
+    </body>
+    <div id="dialogcontainer">
+        <div id="dialog">
+            <span id="dialogx" class="dialogclose">X</span>
+            <h2>Set Countdown</h2>
+            <div class="form">
+                <p>
+                    <label for="date">Date</label>
+                    <input id="date" name="date" type="Date">
+                </p>
+
+                <label>Time</label><br/>
+                <input id="hou" name="hou" class="time" type="number" value="0" min="0" max="23" />
+                :
+                <input id="min" name="min" class="time" type="number" value="0" min="0" max="59" />
+                :
+                <input id="sec" name="sec" class="time" type="number" value="0" min="0" max="59" />
+                .
+                <input id="msc" name="msc" class="time" type="number" value="0" min="0" max="999" />
+                
+                <p>
+                    <label for="redirect">Redirect To</label>
+                    <input id="redirect" name="redirect" type="text" placeholder="https://..." />
+                </p>
+
+                <p style="display: flex;">
+                    <button id="dialogcancel" class="dialogclose" style="margin-right: 1px;">Cancel</button>
+                    <button id="dialogok" style="margin-left: 1px;">Start</button>
+                </p>
+            </div>
+        </label>
+    </div>
+</html>
