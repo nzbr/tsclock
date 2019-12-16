@@ -28,6 +28,50 @@ function load() {
         console.log(to);
     }
 
+    let left = 10;
+    let t = 0;
+    let lmode = 0;
+    let tmode = 0;
+    let move = 5;
+
+    let dvd = false;
+    document.getElementById("dvd").addEventListener("click", () => {
+      dvd = !dvd;
+    });
+    setInterval(() => {
+      if(dvd){
+      if (lmode == 0){
+        left += move;
+      }
+      if (tmode == 0){
+        t += move;
+      }
+      if (lmode == 1){
+        left -= move;
+      }
+      if (tmode == 1){
+        t -= move;
+      }
+      if (left >= window.innerWidth- text.offsetWidth-10 ){
+        lmode = 1;
+      }
+      if (left <= 0){
+        lmode = 0;
+      }
+      if (t >= window.innerHeight- text.offsetHeight-10 ){
+        tmode = 1;
+      }
+      if (t <= 0){
+        tmode = 0;
+      }
+      text.setAttribute("style", "position: absolute; left: "+left+"px; top:"+t+"px;");
+      }else{
+      text.setAttribute("style", "");
+      }
+
+
+    }, 10)
+
     let redirected = false;
     setInterval(() => {
         let date = new Date()
