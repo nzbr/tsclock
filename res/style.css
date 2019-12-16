@@ -9,7 +9,7 @@ body {
     justify-content: center;
     flex-direction: column;
 
-    font-family: 'DIN1451Mittelschrift';
+    font-family: 'DIN 1451 Mittelschrift';
 }
 
 main {
@@ -60,7 +60,7 @@ footer {
     position: absolute;
     left: 0;
     top: 0;
-    
+
     min-width: 100vw;
     min-height: 100vh;
     display: none; /*Will be flex when it is shown*/
