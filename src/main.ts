@@ -17,10 +17,16 @@ function load() {
 
     dialogSetup(getparams);
 
+    if (getparams.has("color")) {
+      let styleNode = document.createElement("style");
+      styleNode.innerHTML = ".texture { background-color: "+getparams.get("color").strc+"; background-image: none; }";
+      document.head.appendChild(styleNode);
+    }
+
     let text = document.getElementById("clocktext");
 
-    let hasEnd = false
-    let to = new Date()
+    let hasEnd = false;
+    let to = new Date();
 
     if (getparams.has("to") && getparams.get("to").isDate) {
         hasEnd = true;

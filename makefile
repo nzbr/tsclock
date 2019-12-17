@@ -1,7 +1,7 @@
 resources = $(patsubst res/%,build/%,$(wildcard res/**))
 
 .PHONY: all
-all : build build/script.js $(resources)
+buildall : build build/script.js $(resources)
 	@printf '\n  ###########\n  # SUCCESS #\n  ###########\n\n'
 
 .PHONY: clean
@@ -28,3 +28,7 @@ build/script.js : build/script.ts build
 build/% : res/% build
 	@printf '  CP\t$<\t->\t$@\n'
 	@cp $< $@
+
+.PHONY: deploy
+deploy: buildall
+	./deploy.sh
