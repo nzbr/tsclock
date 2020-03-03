@@ -41,6 +41,9 @@ function load() {
   let tmode = true;
 
   let dvd = false;
+  if (getparams.has("dvd")) {
+    dvd = true;
+  }
   document.getElementById("dvd").addEventListener("click", () => {
     dvd = !dvd;
   });
